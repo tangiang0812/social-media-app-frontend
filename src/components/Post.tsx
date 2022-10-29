@@ -8,12 +8,15 @@ interface PostProps {}
 
 const Post: React.FC<PostProps> = () => {
   return (
-    <Box width="680px">
-      <Box borderWidth={1} borderRadius={10}>
-        <PostHeader></PostHeader>
-        <PostContent></PostContent>
-        <PostFooter></PostFooter>
-      </Box>
+    <Box
+      width="680px"
+      backgroundColor="white"
+      borderWidth={1}
+      borderRadius={15}
+    >
+      <PostHeader></PostHeader>
+      <PostContent></PostContent>
+      <PostFooter></PostFooter>
     </Box>
   );
 };

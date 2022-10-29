@@ -9,7 +9,7 @@ const PostHeader = () => {
       alignItems="center"
       padding={3}
       gap={2}
-      borderBottomWidth={1}
+      borderBottomWidth={2}
     >
       <UserAvatar />
       <Spacer />

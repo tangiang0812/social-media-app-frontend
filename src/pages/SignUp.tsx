@@ -32,7 +32,7 @@ const SignUp: React.FC = () => {
   return (
     <Box
       w="680px"
-      borderRadius={5}
+      borderRadius={15}
       borderWidth={1}
       padding={4}
       marginTop={10}

@@ -1,27 +1,29 @@
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import Post from "../components/Post";
+import Suggestion from "../components/Suggestion";
 
 const Home: React.FC = () => {
   return (
-    <Box
-      paddingY={5}
-      justifyContent="space-around"
-      height="92.5vh"
-      maxWidth="100%"
-      display="flex"
+    <Flex
+      minHeight="92.5vh"
+      justifyContent="center"
       flexDir="row"
+      backgroundColor="gray.200"
     >
-      <Box width="70%" display="flex" flexDir="column">
+      <Box display="flex" padding={5} flexDir="column">
         <VStack spacing={5}>
+          <Post />
+          <Post />
+          <Post />
           <Post />
           <Post />
         </VStack>
       </Box>
-      <Box width="30%" justifyContent="center" display="flex">
-        Aloalo
+      <Box padding={5}>
+        <Suggestion />
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

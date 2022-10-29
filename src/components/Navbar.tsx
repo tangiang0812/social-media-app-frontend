@@ -7,20 +7,24 @@ function Navbar() {
     <Flex
       minWidth="max-content"
       alignItems="center"
-      padding={2}
+      paddingX={8}
+      paddingY={2}
       gap={3}
-      borderWidth={5}
     >
-      <Button colorScheme={"blackAlpha"}>
-        <Link to="/home">Home</Link>
-      </Button>
+      <Link to="/home">
+        <Button colorScheme={"blackAlpha"}>Home</Button>
+      </Link>
       <Spacer />
-      <Button colorScheme={"twitter"} variant="ghost" marginLeft={2}>
-        <Link to="/login">Login</Link>
-      </Button>
-      <Button colorScheme={"twitter"} marginLeft={2}>
-        <Link to="register">Sign Up</Link>
-      </Button>
+      <Link to="/login">
+        <Button colorScheme={"twitter"} variant="ghost" marginLeft={2}>
+          Login
+        </Button>
+      </Link>
+      <Link to="register">
+        <Button colorScheme={"twitter"} marginLeft={2}>
+          Sign Up
+        </Button>
+      </Link>
     </Flex>
   );
 }
