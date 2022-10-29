@@ -23,7 +23,7 @@ function App(): JSX.Element {
       <ChakraProvider>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/profile" element={<Profile />} />
