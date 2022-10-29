@@ -1,29 +1,20 @@
-import { Box, Button, Link } from "@chakra-ui/react";
+import { Button, Flex, Link, Spacer } from "@chakra-ui/react";
 import React from "react";
 
 function Navbar() {
   return (
-    <Box
-      w="100%"
-      justifyContent={"space-between"}
-      display="flex"
-      p="5px 10px"
-      alignItems="center"
-      background="white"
-      borderWidth="5px"
-    >
+    <Flex minWidth="max-content" alignItems="center" padding={2} gap={3} borderWidth={5}>
       <Button colorScheme={"blackAlpha"}>
         <Link href="/">Home</Link>
       </Button>
-      <div>
-        <Button colorScheme={"cyan"} variant="ghost" marginLeft={2}>
-          <Link href="/login">Login</Link>
-        </Button>
-        <Button colorScheme={"cyan"} marginLeft={2}>
-          <Link href="register">Sign Up</Link>
-        </Button>
-      </div>
-    </Box>
+      <Spacer />
+      <Button colorScheme={"twitter"} variant="ghost" marginLeft={2}>
+        <Link href="/login">Login</Link>
+      </Button>
+      <Button colorScheme={"twitter"} marginLeft={2}>
+        <Link href="register">Sign Up</Link>
+      </Button>
+    </Flex>
   );
 }
 

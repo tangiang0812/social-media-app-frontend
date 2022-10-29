@@ -10,16 +10,14 @@ import {
   Link,
   VStack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { MouseEventHandler, useState } from "react";
 
 const Login: React.FC = () => {
   const [show, setShow] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleLogin = async (
-    event: React.MouseEvent<HTMLButtonElement>
-  ): Promise<void> => {
+  const handleLogin: MouseEventHandler<HTMLButtonElement> = async (event) => {
     event.preventDefault();
     console.log(email);
     console.log(password);
@@ -85,6 +83,6 @@ const Login: React.FC = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default Login;

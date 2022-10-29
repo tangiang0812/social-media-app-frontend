@@ -7,6 +7,15 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faThumbsUp as fasThumbsUp,
+  faEllipsis,
+  faShareFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp as farThumbsUp } from "@fortawesome/free-regular-svg-icons";
+
+library.add(fasThumbsUp, farThumbsUp, faEllipsis, faShareFromSquare);
 
 function App(): JSX.Element {
   return (
