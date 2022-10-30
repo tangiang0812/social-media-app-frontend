@@ -13,6 +13,7 @@ const Post: React.FC<PostProps> = () => {
       backgroundColor="white"
       borderWidth={1}
       borderRadius={15}
+      boxShadow="lg"
     >
       <PostHeader></PostHeader>
       <PostContent></PostContent>

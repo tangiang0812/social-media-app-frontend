@@ -1,5 +1,6 @@
 import { Avatar, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UserTag = () => {
   return (
@@ -12,7 +13,9 @@ const UserTag = () => {
         </Flex>
       </Flex>
       <Spacer />
+      <Link to="/profile">
       <Button>View user</Button>
+      </Link>
     </Flex>
   );
 };
