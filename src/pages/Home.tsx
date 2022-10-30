@@ -1,5 +1,6 @@
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import React from "react";
+import CreatePost from "../components/CreatePost";
 import Post from "../components/Post";
 import Suggestion from "../components/Suggestion";
 
@@ -11,7 +12,8 @@ const Home: React.FC = () => {
       flexDir="row"
       backgroundColor="gray.200"
     >
-      <Box display="flex" padding={5} flexDir="column">
+      <Flex flexDir="column" padding={5} gap={5}>
+        <CreatePost />
         <VStack spacing={5}>
           <Post />
           <Post />
@@ -19,7 +21,7 @@ const Home: React.FC = () => {
           <Post />
           <Post />
         </VStack>
-      </Box>
+      </Flex>
       <Box padding={5}>
         <Suggestion />
       </Box>

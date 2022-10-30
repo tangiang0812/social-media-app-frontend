@@ -24,7 +24,7 @@ const Suggestion = () => {
         >
           Users You Can Follow
         </Text>
-        <VStack spacing={4} margin={4}>
+        <VStack paddingY={2}spacing={4} margin={4}>
           <UserTag />
           <UserTag />
           <UserTag />

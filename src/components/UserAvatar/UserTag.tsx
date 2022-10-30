@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const UserTag = () => {
   return (
-    <Flex alignItems="center"  flexDir="row" width="100%">
+    <Flex borderBottomWidth={2}  paddingBottom={3} alignItems="center"  flexDir="row" width="100%">
       <Flex flexDir="row" gap="2">
         <Avatar />
         <Flex flexDir="column">

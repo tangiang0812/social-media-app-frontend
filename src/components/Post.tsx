@@ -14,6 +14,7 @@ const Post: React.FC<PostProps> = () => {
       borderWidth={1}
       borderRadius={15}
       boxShadow="lg"
+      padding={3}
     >
       <PostHeader></PostHeader>
       <PostContent></PostContent>
