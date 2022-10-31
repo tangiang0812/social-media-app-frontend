@@ -1,8 +1,12 @@
 import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import UserSettings from "./UserAvatar/UserSettings";
 
 function Navbar() {
+  const location = useLocation();
+  console.log(location);
   return (
     <Box
       position="sticky"
@@ -19,19 +23,25 @@ function Navbar() {
         gap={3}
       >
         <Link to="/home">
-          <Button colorScheme={"blackAlpha"}>Home</Button>
+          <Button variant="ghost" colorScheme="twitter">
+            <FontAwesomeIcon icon={["fas", "kiwi-bird"]} size="xl" />
+          </Button>
         </Link>
         <Spacer />
-        <Link to="/login">
-          <Button colorScheme={"twitter"} variant="ghost" marginLeft={2}>
-            Login
-          </Button>
-        </Link>
-        <Link to="register">
-          <Button colorScheme={"twitter"} marginLeft={2}>
-            Sign Up
-          </Button>
-        </Link>
+        {location.pathname === "/login" || location.pathname === "/register" || location.pathname == "/" ? (
+          <>
+            <Link to="/login">
+              <Button colorScheme={"twitter"} variant="ghost">
+                Login
+              </Button>
+            </Link>
+            <Link to="register">
+              <Button colorScheme={"twitter"}>Sign Up</Button>
+            </Link>
+          </>
+        ) : (
+          <UserSettings />
+        )}
       </Flex>
     </Box>
   );

@@ -12,10 +12,11 @@ import {
   faThumbsUp as fasThumbsUp,
   faEllipsis,
   faShareFromSquare,
+  faKiwiBird,
 } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp as farThumbsUp } from "@fortawesome/free-regular-svg-icons";
 
-library.add(fasThumbsUp, farThumbsUp, faEllipsis, faShareFromSquare);
+library.add(fasThumbsUp, farThumbsUp, faEllipsis, faShareFromSquare, faKiwiBird);
 
 function App(): JSX.Element {
   return (

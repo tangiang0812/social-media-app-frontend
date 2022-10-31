@@ -1,4 +1,6 @@
 import {
+  Avatar,
+  Box,
   Button,
   Popover,
   PopoverArrow,
@@ -7,26 +9,36 @@ import {
   PopoverTrigger,
   VStack,
 } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { MouseEventHandler } from "react";
+import { Link } from "react-router-dom";
 
-const PostOption = () => {
+const UserSettings = () => {
   const handleClickOptions: MouseEventHandler<HTMLButtonElement> = () => {
     console.log("Giang");
+    console.log(window.location.pathname);
   };
   return (
     <Popover>
       <PopoverTrigger>
-        <Button variant="ghost" onClick={handleClickOptions}>
-          <FontAwesomeIcon icon={["fas", "ellipsis"]} size="xl" />
-        </Button>
+        <Avatar
+          role="button"
+          tabIndex={0}
+          onClick={handleClickOptions}
+          size="md"
+        />
       </PopoverTrigger>
       <PopoverContent>
         <PopoverArrow />
         <PopoverBody>
           <VStack spacing={2}>
-          <Button width="100%" variant="ghost">Hide post</Button>
-          <Button width="100%" variant="ghost">Delete post</Button>
+            <Button variant="ghost">
+              Settings
+            </Button>
+            <Link to="/login">
+              <Button variant="ghost">
+                Logout
+              </Button>
+            </Link>
           </VStack>
         </PopoverBody>
       </PopoverContent>
@@ -34,4 +46,4 @@ const PostOption = () => {
   );
 };
 
-export default PostOption;
+export default UserSettings;
